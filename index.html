@@ -9,7 +9,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Johanna &amp; Leonardo · 20 · Febrero · 2027">
   <meta property="og:description" content="Nos casamos. Tequesquitengo, Morelos. Confirma tu asistencia.">
-  <meta property="og:image" content="https://boda-johanna-y-leonardo.vercel.app/og.jpg?v=1">
+  <meta property="og:image" content="https://boda-johanna-y-leonardo.vercel.app/og.jpg?v=2">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -3096,6 +3096,26 @@ body > section, body > footer{overflow-x:clip}
 @keyframes ornLive{0%,100%{translate:0 0;rotate:0deg}30%{translate:3px -8px;rotate:3deg}65%{translate:-3px -4px;rotate:-3deg}}
 @media(prefers-reduced-motion:reduce){.orn-live{animation:none!important}}
 
+/* ═══ Feed de Instagram en un solo marco ═══ */
+.ig-wrap{margin-top:40px}
+.ig-phone{position:relative;width:min(330px,88vw);margin:0 auto;border-radius:30px;padding:10px 10px 14px;background:#fff;
+  border:1px solid rgba(184,146,74,.55);box-shadow:0 22px 50px -14px rgba(44,58,30,.35),inset 0 0 0 6px #FFF6EC}
+.ig-bar{display:flex;align-items:center;justify-content:space-between;padding:8px 12px 10px;border-bottom:1px solid #efefef}
+.ig-logo{font-family:'Pinyon Script',cursive;font-size:28px;line-height:1;color:#262626}
+.ig-bar-ic{display:flex;gap:14px;color:#262626}
+.ig-bar-ic svg{width:22px;height:22px}
+.ig-viewport{position:relative;overflow:hidden;border-radius:0 0 18px 18px;touch-action:pan-y}
+.ig-track{display:flex!important;flex-direction:column;gap:0!important;padding:0!important;overflow:visible!important;scroll-snap-type:none!important;
+  transition:transform .9s cubic-bezier(.65,0,.25,1);will-change:transform}
+.ig-post{flex:0 0 auto!important;width:100%!important;border:none!important;border-radius:0!important;box-shadow:none!important;opacity:.35;transition:opacity .6s}
+.ig-post.cur{opacity:1}
+.ig-nav{position:absolute;right:-16px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(184,146,74,.6);background:#FFF6EC;color:var(--peach);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;box-shadow:0 4px 12px rgba(44,58,30,.18)}
+.ig-nav svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ig-nav.prev{top:38%}.ig-nav.next{top:calc(38% + 46px)}
+.ig-dots{margin-top:14px!important}
+@media(prefers-reduced-motion:reduce){.ig-track{transition:none}}
+
   </style>
 </head>
 <body>
@@ -3121,8 +3141,8 @@ body > section, body > footer{overflow-x:clip}
 
 <!-- ═══════════════ SOBRE DE APERTURA ═══════════════ -->
 <div id="envelope-screen">
-  <img id="envImage" src="sobre.jpg" alt="Sobre de invitación de Johanna y Leonardo">
-  <video id="envVideo" src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/audio/boda-ciro-y-osmara/sobre-apertura.mp4" muted playsinline preload="auto" poster="sobre.jpg"></video>
+  <img id="envImage" src="sobre.jpg?v=2" alt="Sobre de invitación de Johanna y Leonardo">
+  <video id="envVideo" src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/audio/boda-johanna-y-leonardo/sobre-apertura.mp4" muted playsinline preload="auto" poster="sobre.jpg?v=2"></video>
   <div class="env-tap" id="envTap">Toca para abrir</div>
 </div>
 
@@ -3670,6 +3690,9 @@ body > section, body > footer{overflow-x:clip}
 
   <!-- Fotos estilo Instagram -->
   <div class="ig-wrap">
+    <div class="ig-phone">
+      <div class="ig-bar"><span class="ig-logo">Instagram</span><span class="ig-bar-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M22 3 9.2 10.1M22 3l-7 18-3.8-8.9L2 9.1 22 3z"/></svg></span></div>
+      <div class="ig-viewport" id="igViewport">
     <div class="ig-track" id="igTrack">
       <article class="ig-post"><header class="ig-head"><span class="ig-av"><img src="avatar.jpg" alt=""></span><span class="ig-user"><b>johanna.y.leonardo</b><small>Tequesquitengo, Morelos</small></span><span class="ig-more" aria-hidden="true">···</span></header><div class="ig-photo"><img src="ig1.jpg" alt="Johanna y Leonardo" loading="lazy"><svg class="ig-big" viewBox="0 0 24 24"><path fill="#fff" d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg></div><div class="ig-acts"><button type="button" class="ig-like" aria-label="Me gusta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg></button><button type="button" aria-label="Comentar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M20.7 16.5A9 9 0 1 0 17 20l4 1-0.3-4.5z"/></svg></button><button type="button" aria-label="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M22 3 9.2 10.1M22 3l-7 18-3.8-8.9L2 9.1 22 3z"/></svg></button><button type="button" class="ig-save" aria-label="Guardar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z"/></svg></button></div><p class="ig-likes">Les gusta a <b>248</b> personas</p><p class="ig-cap"><b>johanna.y.leonardo</b>Dijimos que sí, y lo volveríamos a decir mil veces.</p><p class="ig-date">20 de febrero de 2027</p></article>
       <article class="ig-post"><header class="ig-head"><span class="ig-av"><img src="avatar.jpg" alt=""></span><span class="ig-user"><b>johanna.y.leonardo</b><small>Tequesquitengo, Morelos</small></span><span class="ig-more" aria-hidden="true">···</span></header><div class="ig-photo"><img src="ig2.jpg" alt="Johanna y Leonardo" loading="lazy"><svg class="ig-big" viewBox="0 0 24 24"><path fill="#fff" d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg></div><div class="ig-acts"><button type="button" class="ig-like" aria-label="Me gusta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg></button><button type="button" aria-label="Comentar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M20.7 16.5A9 9 0 1 0 17 20l4 1-0.3-4.5z"/></svg></button><button type="button" aria-label="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M22 3 9.2 10.1M22 3l-7 18-3.8-8.9L2 9.1 22 3z"/></svg></button><button type="button" class="ig-save" aria-label="Guardar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z"/></svg></button></div><p class="ig-likes">Les gusta a <b>196</b> personas</p><p class="ig-cap"><b>johanna.y.leonardo</b>Bailar contigo, aunque no haya música.</p><p class="ig-date">Save the date</p></article>
@@ -3678,8 +3701,12 @@ body > section, body > footer{overflow-x:clip}
       <article class="ig-post"><header class="ig-head"><span class="ig-av"><img src="avatar.jpg" alt=""></span><span class="ig-user"><b>johanna.y.leonardo</b><small>Tequesquitengo, Morelos</small></span><span class="ig-more" aria-hidden="true">···</span></header><div class="ig-photo"><img src="ig5.jpg" alt="Johanna y Leonardo" loading="lazy"><svg class="ig-big" viewBox="0 0 24 24"><path fill="#fff" d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg></div><div class="ig-acts"><button type="button" class="ig-like" aria-label="Me gusta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg></button><button type="button" aria-label="Comentar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M20.7 16.5A9 9 0 1 0 17 20l4 1-0.3-4.5z"/></svg></button><button type="button" aria-label="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M22 3 9.2 10.1M22 3l-7 18-3.8-8.9L2 9.1 22 3z"/></svg></button><button type="button" class="ig-save" aria-label="Guardar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z"/></svg></button></div><p class="ig-likes">Les gusta a <b>187</b> personas</p><p class="ig-cap"><b>johanna.y.leonardo</b>Tú, yo y un “para siempre”.</p><p class="ig-date">Save the date</p></article>
       <article class="ig-post"><header class="ig-head"><span class="ig-av"><img src="avatar.jpg" alt=""></span><span class="ig-user"><b>johanna.y.leonardo</b><small>Tequesquitengo, Morelos</small></span><span class="ig-more" aria-hidden="true">···</span></header><div class="ig-photo"><img src="ig6.jpg" alt="Johanna y Leonardo" loading="lazy"><svg class="ig-big" viewBox="0 0 24 24"><path fill="#fff" d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg></div><div class="ig-acts"><button type="button" class="ig-like" aria-label="Me gusta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg></button><button type="button" aria-label="Comentar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M20.7 16.5A9 9 0 1 0 17 20l4 1-0.3-4.5z"/></svg></button><button type="button" aria-label="Compartir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M22 3 9.2 10.1M22 3l-7 18-3.8-8.9L2 9.1 22 3z"/></svg></button><button type="button" class="ig-save" aria-label="Guardar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z"/></svg></button></div><p class="ig-likes">Les gusta a <b>230</b> personas</p><p class="ig-cap"><b>johanna.y.leonardo</b>Cuenta regresiva para el 20 de febrero. ¡Los esperamos!</p><p class="ig-date">Save the date</p></article>
     </div>
+      </div>
+      <button type="button" class="ig-nav prev" id="igPrev" aria-label="Publicación anterior"><svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg></button>
+      <button type="button" class="ig-nav next" id="igNext" aria-label="Publicación siguiente"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+    </div>
     <div class="ig-dots" id="igDots"></div>
-    <p class="gal-hint">Desliza · toca dos veces para dar like</p>
+    <p class="gal-hint">El feed avanza solo · toca dos veces una foto para dar like</p>
   </div>
 </section>
 
@@ -4421,8 +4448,8 @@ function scrollAnims() {
   });
 
   // Instagram — fotos que se revelan
-  gsap.from('.ig-post', {
-    opacity: 0, y: 40, duration: .8, stagger: .12, ease,
+  gsap.from('.ig-phone', {
+    opacity: 0, y: 40, duration: .9, ease,
     scrollTrigger: { trigger: '.ig-wrap', start: 'top 85%', once: true }
   });
 
@@ -5487,30 +5514,54 @@ function toast(msg) {
       }).catch(() => {});
   })();
 
-  /* ── Fotos tipo Instagram ── */
+  /* ── Feed tipo Instagram: los posts van saliendo dentro del mismo marco ── */
   (function(){
-    const tr = document.getElementById('igTrack'); if (!tr) return;
+    const vp = document.getElementById('igViewport'), tr = document.getElementById('igTrack'); if (!tr) return;
     const posts = [...tr.querySelectorAll('.ig-post')];
     const dots = document.getElementById('igDots');
     posts.forEach(() => dots.appendChild(document.createElement('i')));
-    function mark(){
-      const c = tr.scrollLeft + tr.clientWidth / 2; let best = 0, bd = 1e9;
-      posts.forEach((p, i) => { const m = p.offsetLeft + p.offsetWidth / 2; const dd = Math.abs(m - c); if (dd < bd) { bd = dd; best = i; } });
-      [...dots.children].forEach((d, i) => d.classList.toggle('on', i === best));
+    let k = 0, timer = null, visible = false, hold = 0;
+    function size(){
+      const h = Math.max(...posts.map(p => p.offsetHeight));
+      vp.style.height = h + 'px';
+      go(k, true);
     }
-    tr.addEventListener('scroll', mark, {passive:true}); mark();
+    function go(i, instant){
+      k = (i + posts.length) % posts.length;
+      tr.style.transition = instant ? 'none' : '';
+      tr.style.transform = 'translate3d(0,' + (-posts[k].offsetTop) + 'px,0)';
+      posts.forEach((p, j) => p.classList.toggle('cur', j === k));
+      [...dots.children].forEach((d, j) => d.classList.toggle('on', j === k));
+    }
+    function tick(){ if (visible && Date.now() > hold && !document.hidden) go(k + 1); }
+    function pause(){ hold = Date.now() + 6000; }
+    document.getElementById('igPrev').addEventListener('click', () => { pause(); go(k - 1); });
+    document.getElementById('igNext').addEventListener('click', () => { pause(); go(k + 1); });
+    let sx = 0, sy = 0;
+    vp.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive: true});
+    vp.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { pause(); go(k + (dx < 0 ? 1 : -1)); }
+    }, {passive: true});
     posts.forEach(p => {
       const ph = p.querySelector('.ig-photo'), lk = p.querySelector('.ig-like'), cnt = p.querySelector('.ig-likes b');
       const base = parseInt(cnt.textContent, 10);
       function setLike(on){ lk.classList.toggle('on', on); cnt.textContent = base + (on ? 1 : 0); }
-      lk.addEventListener('click', () => setLike(!lk.classList.contains('on')));
+      lk.addEventListener('click', () => { pause(); setLike(!lk.classList.contains('on')); });
       let last = 0;
       ph.addEventListener('click', () => {
+        pause();
         const n = Date.now();
         if (n - last < 350) { setLike(true); ph.classList.remove('pop'); void ph.offsetWidth; ph.classList.add('pop'); }
         last = n;
       });
     });
+    if ('IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(e => { visible = e.isIntersecting; }), {threshold: .4}).observe(vp);
+    else visible = true;
+    window.addEventListener('resize', () => size());
+    posts.forEach(p => { const im = p.querySelector('.ig-photo img'); if (im && !im.complete) im.addEventListener('load', size, {once: true}); });
+    size();
+    if (!RM) timer = setInterval(tick, 3600);
   })();
 
   /* ── Hospedaje · carrusel de fotos + mapa Leaflet ── */
