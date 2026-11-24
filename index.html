@@ -3118,6 +3118,14 @@ body > section, body > footer{overflow-x:clip}
 .ig-dots{margin-top:14px!important}
 @media(prefers-reduced-motion:reduce){.ig-track{transition:none}}
 
+.hs-pick{display:flex;gap:8px;justify-content:center;margin:0 auto 16px;max-width:380px;flex-wrap:wrap}
+.hs-pick button{display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 16px;border-radius:30px;border:1px solid rgba(82,106,0,.35);background:#fff;cursor:pointer;
+  font-family:'Cormorant Garamond',serif;font-weight:700;font-size:17px;color:var(--cream);transition:background .25s,color .25s,border-color .25s}
+.hs-pick button b{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--peach-accent);color:#fff;font-size:14px}
+.hs-pick button.on{background:var(--peach);border-color:var(--peach);color:#fff}
+.hs-card[hidden]{display:none}
+.hs-card:not([hidden]){animation:hpIn .45s ease}
+
   </style>
 </head>
 <body>
@@ -3581,7 +3589,7 @@ body > section, body > footer{overflow-x:clip}
   <span class="lbl">Para tu comodidad</span>
   <h2 class="ttl foil-text" style="animation-delay:-4.2s">Hospedaje</h2>
   <div class="gline"></div>
-  <p class="hp-sub">Si vienes de fuera, te sugerimos este hotel a unos pasos del jardín.</p>
+  <p class="hp-sub">Si vienes de fuera, te sugerimos estos hoteles a unos pasos del jardín.</p>
 
   <div class="hp-switch" role="tablist" aria-label="Vista de hospedaje">
     <span class="hp-switch-bg"></span>
@@ -3591,10 +3599,11 @@ body > section, body > footer{overflow-x:clip}
 
   <div class="hp-views">
     <div class="hp-view hp-list on" id="hpList">
-      <article class="hs-card">
+      <div class="hs-pick" role="tablist" aria-label="Elegir hotel"><button type="button" role="tab" class="on" data-h="0" aria-selected="true"><b>1</b> Villa Béjar</button><button type="button" role="tab" data-h="1" aria-selected="false"><b>2</b> Hotel Ameyali</button></div>
+      <article class="hs-card" data-h="0">
         <div class="hs-stage">
           <button type="button" class="hs-arrow prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
-          <div class="hosp-photo"><img id="hsMain" src="hotel/h2.jpg" alt="Villa Béjar Tequesquitengo"></div>
+          <div class="hosp-photo"><img src="hotel/h2.jpg" alt="Villa Béjar Tequesquitengo"></div>
           <button type="button" class="hs-arrow next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
         </div>
         <div class="hs-thumbs"><button type="button" class="hs-th on" data-i="0" aria-label="Foto 1"><img src="hotel/h2.jpg" alt=""></button><button type="button" class="hs-th" data-i="1" aria-label="Foto 2"><img src="hotel/h1.jpg" alt=""></button><button type="button" class="hs-th" data-i="2" aria-label="Foto 3"><img src="hotel/h4.jpg" alt=""></button><button type="button" class="hs-th" data-i="3" aria-label="Foto 4"><img src="hotel/h6.jpg" alt=""></button><button type="button" class="hs-th" data-i="4" aria-label="Foto 5"><img src="hotel/h3.jpg" alt=""></button><button type="button" class="hs-th" data-i="5" aria-label="Foto 6"><img src="hotel/h5.jpg" alt=""></button></div>
@@ -3609,6 +3618,7 @@ body > section, body > footer{overflow-x:clip}
           <a class="hs-btn" href="https://www.google.com/maps/place/Villa+B%C3%A9jar+%26+Spa+Tequesquitengo/@18.6376571,-99.2711354,17z/data=!4m6!3m5!1s0x85cdd47980f9fa11:0x26cc28c49157dcbf!8m2!3d18.6376571!4d-99.2711354" target="_blank" rel="noopener">Cómo llegar</a>
         </div>
       </article>
+      <article class="hs-card" data-h="1" hidden><div class="hs-stage"><button type="button" class="hs-arrow prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button><div class="hosp-photo"><img src="hotel2/a1.jpg" alt="Hotel Ameyali Tequesquitengo"></div><button type="button" class="hs-arrow next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button></div><div class="hs-thumbs"><button type="button" class="hs-th on" data-i="0" aria-label="Foto 1"><img src="hotel2/a1.jpg" alt=""></button><button type="button" class="hs-th" data-i="1" aria-label="Foto 2"><img src="hotel2/a2.jpg" alt=""></button><button type="button" class="hs-th" data-i="2" aria-label="Foto 3"><img src="hotel2/a3.jpg" alt=""></button><button type="button" class="hs-th" data-i="3" aria-label="Foto 4"><img src="hotel2/a4.jpg" alt=""></button><button type="button" class="hs-th" data-i="4" aria-label="Foto 5"><img src="hotel2/a5.jpg" alt=""></button><button type="button" class="hs-th" data-i="5" aria-label="Foto 6"><img src="hotel2/a6.jpg" alt=""></button></div><div class="hs-dots"><button type="button" class="on" data-i="0" aria-label="Foto 1"></button><button type="button" class="" data-i="1" aria-label="Foto 2"></button><button type="button" class="" data-i="2" aria-label="Foto 3"></button><button type="button" class="" data-i="3" aria-label="Foto 4"></button><button type="button" class="" data-i="4" aria-label="Foto 5"></button><button type="button" class="" data-i="5" aria-label="Foto 6"></button></div><span class="hs-type">Hotel</span><h3 class="hs-name foil-text">Hotel Ameyali</h3><p class="hs-addr">Las Alas, Mirador 3, Glorieta de, 62915 Tequesquitengo, Mor.</p><p class="hs-dist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-1.5-6.5A2 2 0 0015.6 9H8.4a2 2 0 00-1.9 1.5L5 17z"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="16.5" cy="17.5" r="1.8"/></svg> 0.2 km · 1 min a la recepción</p><p class="hs-res">Reservaciones: <a href="tel:+527341311412">734 131 1412</a></p><div class="hs-btns"><a class="hs-btn solid" href="https://hotelameyali.com/" target="_blank" rel="noopener">Reservar</a><a class="hs-btn" href="https://www.google.com/maps/place/Hotel+Ameyali+Tequesquitengo/@18.642453,-99.2690162,17z/data=!4m9!3m8!1s0x85cdd471d031dd13:0xbe17eb766e0046ac!5m2!4m1!1i2!8m2!3d18.642453!4d-99.2690162" target="_blank" rel="noopener">Cómo llegar</a></div></article>
     </div>
 
     <div class="hp-view hp-mapview" id="hpMapView" hidden>
@@ -5571,23 +5581,32 @@ function toast(msg) {
 
   /* ── Hospedaje · carrusel de fotos + mapa Leaflet ── */
   (function(){
-    const imgs = ['hotel/h2.jpg','hotel/h1.jpg','hotel/h4.jpg','hotel/h6.jpg','hotel/h3.jpg','hotel/h5.jpg'];
-    const main = document.getElementById('hsMain'); if (!main) return;
-    const th = [...document.querySelectorAll('.hs-th')], dt = [...document.querySelectorAll('.hs-dots button')];
-    let k = 0;
-    function go(i){ k = (i + imgs.length) % imgs.length; main.style.opacity = 0; setTimeout(() => { main.src = imgs[k]; main.style.opacity = 1; }, 180);
-      th.forEach((b, j) => b.classList.toggle('on', j === k)); dt.forEach((b, j) => b.classList.toggle('on', j === k)); }
-    document.querySelector('.hs-arrow.prev').addEventListener('click', () => go(k - 1));
-    document.querySelector('.hs-arrow.next').addEventListener('click', () => go(k + 1));
-    th.concat(dt).forEach(b => b.addEventListener('click', () => go(+b.dataset.i)));
-    let sx = 0, sy = 0; const ph = document.querySelector('.hosp-photo');
-    ph.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive: true});
-    ph.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) go(k + (dx < 0 ? 1 : -1)); }, {passive: true});
+    const SETS = [['hotel/h2.jpg','hotel/h1.jpg','hotel/h4.jpg','hotel/h6.jpg','hotel/h3.jpg','hotel/h5.jpg'], ['hotel2/a1.jpg','hotel2/a2.jpg','hotel2/a3.jpg','hotel2/a4.jpg','hotel2/a5.jpg','hotel2/a6.jpg']];
+    const cards = [...document.querySelectorAll('.hs-card')]; if (!cards.length) return;
+    cards.forEach((card, ci) => {
+      const imgs = SETS[ci], main = card.querySelector('.hosp-photo img');
+      const th = [...card.querySelectorAll('.hs-th')], dt = [...card.querySelectorAll('.hs-dots button')];
+      let k = 0;
+      function go(i){ k = (i + imgs.length) % imgs.length; main.style.opacity = 0; setTimeout(() => { main.src = imgs[k]; main.style.opacity = 1; }, 180);
+        th.forEach((b, j) => b.classList.toggle('on', j === k)); dt.forEach((b, j) => b.classList.toggle('on', j === k)); }
+      card.querySelector('.hs-arrow.prev').addEventListener('click', () => go(k - 1));
+      card.querySelector('.hs-arrow.next').addEventListener('click', () => go(k + 1));
+      th.concat(dt).forEach(b => b.addEventListener('click', () => go(+b.dataset.i)));
+      let sx = 0, sy = 0; const ph = card.querySelector('.hosp-photo');
+      ph.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive: true});
+      ph.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) go(k + (dx < 0 ? 1 : -1)); }, {passive: true});
+    });
+    function showHotel(h){
+      cards.forEach(c => { c.hidden = +c.dataset.h !== h; });
+      document.querySelectorAll('.hs-pick button').forEach(b => { const on = +b.dataset.h === h; b.classList.toggle('on', on); b.setAttribute('aria-selected', on); });
+    }
+    document.querySelectorAll('.hs-pick button').forEach(b => b.addEventListener('click', () => { showHotel(+b.dataset.h); window.dispatchEvent(new Event('ely-stop-auto')); }));
 
     const sw = document.querySelector('.hp-switch'), bL = document.getElementById('hpBtnList'), bM = document.getElementById('hpBtnMap');
     const vL = document.getElementById('hpList'), vM = document.getElementById('hpMapView');
     const VENUE = [18.6424102, -99.2671769];
-    const HOTELS = [[18.6376571, -99.2711354]];
+    const HOTELS = [[18.6376571, -99.2711354], [18.642453, -99.2690162]];
+    const HNAMES = ['Villa Béjar Tequesquitengo', 'Hotel Ameyali'];
     let map = null, fitAll = null;
     function setMode(m){
       const isMap = m === 'map';
@@ -5613,11 +5632,21 @@ function toast(msg) {
         const pill = L.divIcon({className: 'lf-pill', html: '<span>Ceremonia y recepción</span><i></i>', iconSize: null, iconAnchor: [0, 0]});
         L.marker(VENUE, {icon: pill, interactive: false, keyboard: false}).addTo(map);
         const card = document.getElementById('lfCard'), hint = document.getElementById('lfHint');
-        function openCard(ll){ card.classList.add('on'); hint.classList.add('off'); map.flyTo(ll, 15, {duration: .8}); }
+        const cardData = [
+          {type: 'Hotel & Spa', name: 'Villa Béjar Tequesquitengo', addr: 'Boulevard Tequesquitengo esq. Lomas Tropicales', dist: '0.8 km · 2 min a la recepción', loc: 'https://www.google.com/maps/place/Villa+B%C3%A9jar+%26+Spa+Tequesquitengo/@18.6376571,-99.2711354,17z/data=!4m6!3m5!1s0x85cdd47980f9fa11:0x26cc28c49157dcbf!8m2!3d18.6376571!4d-99.2711354', book: 'https://www.booking.com/hotel/mx/villa-bejar-tequesquitengo.es-mx.html'},
+          {type: 'Hotel', name: 'Hotel Ameyali', addr: 'Las Alas, Mirador 3, Tequesquitengo', dist: '0.2 km · 1 min a la recepción', loc: 'https://www.google.com/maps/place/Hotel+Ameyali+Tequesquitengo/@18.642453,-99.2690162,17z/data=!4m9!3m8!1s0x85cdd471d031dd13:0xbe17eb766e0046ac!5m2!4m1!1i2!8m2!3d18.642453!4d-99.2690162', book: 'https://hotelameyali.com/'}
+        ];
+        function fillCard(i){
+          const d = cardData[i];
+          card.querySelector('.lf-type').textContent = d.type; card.querySelector('.lf-name').textContent = d.name;
+          card.querySelector('.lf-addr').textContent = d.addr; card.querySelector('.lf-dist').textContent = d.dist;
+          const as = card.querySelectorAll('.lf-btns a'); as[0].href = d.loc; as[1].href = d.book;
+        }
+        function openCard(ll, i){ fillCard(i); card.classList.add('on'); hint.classList.add('off'); map.flyTo(ll, 16, {duration: .8}); }
         function closeCard(){ card.classList.remove('on'); }
-        HOTELS.forEach(ll => {
+        HOTELS.forEach((ll, i) => {
           const ic = L.divIcon({className: 'lf-dot', html: '<b></b>', iconSize: [16, 16], iconAnchor: [8, 8]});
-          L.marker(ll, {icon: ic, title: 'Villa Béjar Tequesquitengo'}).addTo(map).on('click', e => { L.DomEvent.stopPropagation(e); openCard(ll); });
+          L.marker(ll, {icon: ic, title: HNAMES[i]}).addTo(map).on('click', e => { L.DomEvent.stopPropagation(e); openCard(ll, i); });
         });
         map.on('click', closeCard);
         document.getElementById('lfX').addEventListener('click', closeCard);
